@@ -3,11 +3,11 @@ import os
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
 
-from create_exersise import create_ten_random_exercise
+from create_exersise import create_ten_random_exercises
 
 
 def start(bot, update):
-    bot.sendMessage(chat_id=update.message.chat_id, text=f"{create_ten_random_exercise()}")
+    bot.sendMessage(chat_id=update.message.chat_id, text=f"{create_ten_random_exercises()}")
 
 
 def polling():
