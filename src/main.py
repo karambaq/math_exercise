@@ -1,3 +1,3 @@
-from create_exersise import create_ten_random_exercises
+import bot
 
 bot.polling()
