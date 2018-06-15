@@ -8,6 +8,7 @@ from create_exersise import create_ten_random_exercises
 
 def start(bot, update):
     bot.sendMessage(chat_id=update.message.chat_id, text=f"{create_ten_random_exercises()}")
+    print('Sending exercises')
 
 
 def polling():
