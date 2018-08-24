@@ -6,7 +6,6 @@ from telegram.ext import CommandHandler
 from create_exersise import create_ten_random_exercises
 
 
-TOKEN = "687954179:AAHiQy0nBRvkmrGA1Gk1rH8ZA7b3FsNcS68"
 
 def start(bot, update):
     bot.sendMessage(chat_id=update.message.chat_id, text=f"{create_ten_random_exercises()}")
@@ -15,7 +14,7 @@ def start(bot, update):
 
 
 def polling():
-    updater = Updater(token=TOKEN)
+    updater = Updater(token=os.environ.get('TOKEN'))
     start_handler = CommandHandler('start', start) 
     updater.dispatcher.add_handler(start_handler) 
     updater.start_polling() 
